@@ -1,5 +1,6 @@
 var selectElementsStartingWithA = function(array) {
-  return 'Write your method here';
+  array.join(', ').match(/^[a]w+/)
+  return ;
 }
 
 var selectElementsStartingWithA = function(array) {
