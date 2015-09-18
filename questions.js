@@ -1,30 +1,32 @@
 
 var selectElementsStartingWithA = function(array) {
-  return array.filter(function(data){
+  return array.filter( function(data) {
     return data.match(/\ba\w+/);
   });
 }
 
 var selectElementsStartingWithVowel = function(array) {
-  return array.filter(function(data){
+  return array.filter( function(data) {
     return data.match(/\b[aeiou]\w+/);
   });
 }
 
 var removeNullElements = function(array) {
-  return array.filter(function(data){
+  return array.filter( function(data) {
     return data != null;
   });
 }
 
 var removeNullAndFalseElements = function(array) {
-  return array.filter(function(data){
-    return(data != null) && data != false;
+  return array.filter( function(data) {
+    return (data != null) && data != false;
   });
 }
 
 var reverseWordsInArray = function(array) {
-  return array.reverse().join('');
+  return array.map( function (string) {
+    return string.split('').reverse().join('');
+  });
 }
 
 var everyPossiblePair = function(array) {
@@ -32,11 +34,15 @@ var everyPossiblePair = function(array) {
 }
 
 var allElementsExceptFirstThree = function(array) {
-  return 'Write your method here';
+  for (var i = 0; i < 3; i++) {
+    array.shift();
+  }
+  return array;
 }
 
 var addElementToBeginning = function(array, element) {
-  return 'Write your method here';
+  array.unshift(element);
+  return array;
 }
 
 var sortByLastLetter = function(array) {
